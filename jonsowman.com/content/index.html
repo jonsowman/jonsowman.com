@@ -1,0 +1,35 @@
+---
+title: Home
+subtitle: Columns template
+description: Test description
+---
+
+{% extends "topbar.j2" %}
+
+{% block container %}
+<img
+src="https://en.gravatar.com/userimage/22224465/a61aeb249231e175f2f6d383b320e042.jpg"
+class="avatar-img" /><h1>Home</h1>
+<hr />
+    <a href="{{ content_url('hab') }}">High altitude ballooning</a> (including
+    <a href="{{content_url('apex')}}">Apex</a>), <a
+        href="{{content_url('sgs') }}">weather satellite receiver and weather
+        station</a>, and other assorted <a
+        href="{{content_url('electronics')}}">electronics</a>.
+<br /><br />
+Get in touch: jon@<a href="http://jonsowman.com">jonsowman.com</a> 
+(<a href="{{ media_url('jonsowman.asc') }}">0cb6063d</a>) - 
+<a href="http://twitter.com/jonsowman" target="_blank">@jonsowman</a> - 
+<a href="http://flickr.com/jonsowman" target="_blank">flickr</a> - 
+<a href="http://github.com/jonsowman" target="_blank">github</a> - 
+M&Oslash;JSN
+<br /><br />
+Jon Sowman - <i>University of Cambridge Engineering (M.Eng). Engineering
+    Doctorate (Eng.D) University of Southampton.</i>
+<br /><br />
+<span class="image-montage">
+    <img src="{{ media_url('images/fcnode3.jpg') }}" width="300" /><img src="{{
+    media_url('images/calfill.jpg') }}" width="300" /><img src="{{ media_url('images/joey.jpg') }}" width="300" />
+</span>
+
+{% endblock container %}

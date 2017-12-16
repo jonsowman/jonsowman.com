@@ -1,0 +1,48 @@
+---
+title: Apex
+subtitle: Columns template
+description: Test description
+category: Apex
+---
+
+{% extends "columns.j2" %}
+
+{% block main %}
+<h1>Project Apex</h1>
+<h3>High Altitude Photography Experiments</h3>
+<hr />
+
+The Apex Project now has a new home at <a href="http://www.apexhab.org"
+    target="_blank">apexhab.org</a> - however most content will also appear 
+    here.
+<br />
+
+The Apex Project was started with the aim of using high altitude meteorological
+balloons to take photographs and collect sensor data from near-space. Details
+of each individual payload is given on the relevant pages in this section.
+<br />
+<br />
+Apex I: Built September 08 - April 09
+<ul>
+    <li>Launched 25/04/09. (<a href="http://apex.hexoc.com/lost_apexi.php">Lost
+        payload!</a>) (<a href="http://apex.hexoc.com/apex-i-track.kml">KML
+        track</a>)</li>
+</ul>
+ 
+Apex II: Built June 09 - July 10
+<ul>
+    <li>Launched 17/07/10. <b>Recovered.</b> (<a
+        href="http://apex.hexoc.com/apex-ii/track.kml">KML track</a>/<a
+        href="http://maps.google.com/maps?q=http://apex.hexoc.com/apex-ii/track.kml">Google
+        Maps</a>) (<a
+        href="http://apex.hexoc.com/apex-ii/track_w_photo_web.kml">with
+        photos</a>)</li>
+    <li>Launched 09/04/11. <b>Recovered.</b> (<a
+        href="http://apex.hexoc.com/apex-ii/launch2/track.kml">KML track</a>/<a
+        href="http://maps.google.com/maps?q=http://apex.hexoc.com/apex-ii/launch2/track.kml">Google
+        Maps</a>)</li>
+</ul>
+
+<img src="{{ media_url('images/apex-i-launch.jpg') }}" width="300" />
+
+{% endblock main %}

@@ -1,0 +1,72 @@
+{% macro render_main_menu() -%}
+<ul class="nav">
+{% for menu_item in menu -%}
+  <li{% if node.url == menu_item.url or menu_item.active %} class="active"{% endif %}><a href="{{ content_url(menu_item.url) }}">{{ menu_item.title }}</a></li>
+{%- endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro render_breadcrumbs() -%}
+<ul class="breadcrumb">
+<li>
+<a href="{{ content_url('') }}">Home</a>
+</li>
+{% if not node.url == '/' %}
+<span class="separator">/</span>
+{% endif %}
+{% set n = node %}
+{% for _ in range(1, 10) %}
+{% if not n.parent %}{% break %}{% endif %}
+{% if resource.name == "index.html" %}
+    <li class="active">
+    {{n.name|title}}
+{% else %}
+    <li>
+    <a href="{{n.full_url}}">{{n.name|title}}</a>
+{% endif %}
+{% if not resource.name == "index.html" %}<span class="separator">/</span>{% endif %}
+</li>
+{% set n = n.parent %}
+{% endfor %}
+{% if not resource.name == "index.html" %}
+<li class="active">
+{{resource.meta.title}}
+</li>
+{% endif %}
+</ul>    
+{%- endmacro %}
+
+{% macro render_sidebar() -%}
+<ul class="nav nav-list">
+    <li class="nav-header">{{ resource.meta.category }} Projects</li>
+
+{% if resource.meta.category == "Electronics" %}
+{% for sidebar_item in electronics_sidebar -%}
+<li{% if full_url(sidebar_item.url) == full_url(resource.url) or sidebar_item.active %}
+ class="active"{% endif %}><a href="{{ content_url(sidebar_item.url) }}">{{ sidebar_item.title }}</a></li>
+{%- endfor %}
+{% endif %}
+
+{% if resource.meta.category == "SGS Weather" %}
+{% for sidebar_item in sgs_sidebar -%}
+<li{% if full_url(sidebar_item.url) == full_url(resource.url) or sidebar_item.active %}
+ class="active"{% endif %}><a href="{{ content_url(sidebar_item.url) }}">{{ sidebar_item.title }}</a></li>
+{%- endfor %}
+{% endif %}
+
+{% if resource.meta.category == "Apex" %}
+{% for sidebar_item in apex_sidebar -%}
+<li{% if full_url(sidebar_item.url) == full_url(resource.url) or sidebar_item.active %}
+ class="active"{% endif %}><a href="{{ content_url(sidebar_item.url) }}">{{ sidebar_item.title }}</a></li>
+{%- endfor %}
+{% endif %}
+
+{% if resource.meta.category == "HAB" %}
+{% for sidebar_item in hab_sidebar -%}
+<li{% if full_url(sidebar_item.url) == full_url(resource.url) or sidebar_item.active %}
+ class="active"{% endif %}><a href="{{ content_url(sidebar_item.url) }}">{{ sidebar_item.title }}</a></li>
+{%- endfor %}
+{% endif %}
+
+</ul>
+{%- endmacro %}

@@ -1,0 +1,29 @@
+---
+title: High Altitude Ballooning
+subtitle: Columns template
+description: Test description
+category: HAB
+---
+
+{% extends "columns.j2" %}
+
+{% block main %}
+<h1>HAB: High Altitude Ballooning</h1>
+HAB projects (not <a href="{{ content_url('apex') }}">Apex</a>) listed here.
+<hr />
+
+This section is for HAB related work and developments that are not part of the
+Apex project, for example work done with and for CU Spaceflight, of which I am
+a member.
+
+<ul>
+    <li><a href="{{ content_url('hab/ferret.html') }}">Ferret</a>: a quick high altitude balloon tracker knocked up in an afternoon for a
+    balloon launch (Project Orion) launched on 07/03/10 from Churchill College,
+    Cambridge.</li>
+    <li><a href="{{ content_url('hab/joey.html') }}">Joey</a>: part of the Wombat project by CU Spaceflight, using a Micrel MICRF112 ISM
+    band 434MHz radio, uBlox6 GPS and Atmel AVR.</li>
+</ul>
+
+<img src="{{ media_url('images/nova-8-dawn.jpg') }}" width="600" />
+
+{% endblock main %}

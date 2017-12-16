@@ -1,0 +1,83 @@
+---
+title: Apex II Launch 2 Announcement
+subtitle: Columns template
+description: Test description
+category: Apex
+---
+
+{% extends "columns.j2" %}
+
+{% block main %}
+
+<h1>Annoucement: Launch 2</h1>
+<h3>Project Apex II</h3>
+<hr />
+
+Hello all,
+
+Re: Apex II Launch 2 (Dawn Launch)
+
+This is the official notification for the upcoming launch of Project Apex II on Saturday 9th April 2011 from Churchill College, Cambridge. This will be Apex II’s second launch and its first dawn launch. We aim to launch at around 04:40 BST; however, the exact time will depend on the weather conditions on the day and pre-launch testing.
+
+The team is based at Sutton Grammar School for Boys in Sutton, Surrey and this
+is the third payload to be launched by the team. Information on this payload
+can be found at the project’s <a
+    href="http://www.apexhab.org/apex-ii/" target="_blank">homepage</a>, and in
+the project <a href="http://gallery.apex-ii.apexhab.org/" target="_blank">image
+    gallery</a>.
+
+We would be grateful for anyone able to help with the tracking of the payload during its flight. The downlink details are as follows:
+
+<ul>
+<li>
+Listen on AM SSB; NB: LSB (Lower Side Band)
+</li><li>
+434.075 MHz
+</li><li>
+
+Shift: 425
+</li><li>
+
+Baud: 50 and 300 alternating (2 x 300 baud packets (each repeated twice), 1 x 50 baud packet, 15 second up-link window)
+
+</li><li>
+Format: 8 bits per char, no parity, 1 stop bit
+</li><li>
+
+Decoding: Select the APEX payload in dl-fldigi. This defaults to 300 baud; you must switch to 50 baud manually if you wish to decode the 50 baud transmissions. (NB: 50 baud transmissions only contain positional data.)
+
+</li><li>
+A recent version of dl-fldigi is needed to upload data to the tracker due to the unusually long telemetry string length. (r112 or higher required)
+
+</li></ul>
+Just select the “apex” payload in dl-fldigi (get the latest version at <a
+    href="http://github.com/jamescoxon/dl-fldigi/downloads"
+    target="_blank">github</a>). We are experimenting with different baud rates and so the payload will alternate, transmitting a packet on 300 baud twice, then another new packet on 300 baud twice and finally another new packet on 50 baud once (NB: the 50 baud packet only contains positional data) before a 15 second up-link window.
+
+We have an array of sensors on board including temperature, pressure, light,
+and ionising radiation. All this data is transmitted in the telemetry and
+decoded and displayed by the tracker at <a
+    href="http://spacenear.us/tracker" target="_blank">spacenear.us</a>. For those not available to track, you’ll be able to watch the balloon’s path at the tracker link above.
+
+Additionally, the payload will be taking photographs and capturing HD video of the sunrise throughout its dawn flight.
+
+For latest information and updates on the launch date, keep an eye on Twitter
+(<a href="http://twitter.com/apexhab" target="_blank">@apexhab</a>) and for the
+&#35;apexhab hashtag. Also we will be on IRC channels &#35;apexhab and also
+&#35;highaltitude on irc.freenode.net. Also, don’t forget to check the project
+website for updates: <a href="http://www.apexhab.org"
+    target="_blank">apexhab.org</a>.
+
+Get in contact with the team by using the team mailing list: <a
+    href="mailto:team@apexhab.org">team@apexhab.org</a>. Write-ups of the
+project, photographs and videos will be available at the project website (<a
+    href="http://www.apexhab.org" target="_blank">apexhab.org</a>) after the launch.
+
+Best regards,
+
+Priyesh Patel
+<br />
+On behalf of the Apex II Team
+
+
+{% endblock main %}

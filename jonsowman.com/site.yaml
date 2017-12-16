@@ -1,0 +1,55 @@
+mode: development # Use "hyde publish -c prod.yaml to have this automatically switch to production
+base_url: /
+media_root: media # Relative path from content folder.
+media_url: /media # URL where the media files are served from.
+deploy_root: deploy
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.meta.SorterPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+    - hyde.ext.plugins.textlinks.TextlinksPlugin
+context:
+    data:
+        site_title: jonsowman
+        author:
+            name: Jon Sowman
+            url: "http://jonsowman.com"
+        google_analytics_id: UA-XXXXX-YY
+        home_url: /
+        menu:
+            - title: Home
+              url: /
+            - title: Electronics
+              url: /electronics
+            - title: SGS Weather
+              url: /sgs
+            - title: Apex
+              url: /apex
+            - title: HAB
+              url: /hab
+        electronics_sidebar:
+            - title: Ultrasound Ranger
+              url: electronics/ultrasound.html
+            - title: Altitude Logger
+              url: electronics/altimeter.html
+            - title: Digital Spirit Level
+              url: electronics/spirit_level.html
+            - title: UKHASnet
+              url: electronics/ukhasnet.html
+        sgs_sidebar:
+            - title: Weather Station
+              url: sgs/weather.html
+            - title: Satellite Receiver
+              url: sgs/wxsat.html
+        apex_sidebar:
+            - title: Apex I
+              url: apex/apex-i.html
+            - title: Apex II
+              url: apex/apex-ii.html
+        hab_sidebar:
+            - title: Ferret
+              url: hab/ferret.html
+            - title: Joey
+              url: hab/joey.html
+

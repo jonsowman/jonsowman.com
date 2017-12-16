@@ -1,0 +1,31 @@
+---
+title: Electronics
+subtitle: Columns template
+description: Test description
+category: Electronics
+---
+
+{% extends "columns.j2" %}
+
+{# Main content for this page #}
+{% block main %}
+<h1>Electronics</h1>
+<hr />
+
+These have either been part of my course (eg. digital spirit level) or personal
+projects (eg. altitude logger).<br />
+
+<ul>
+    <li><a href="{{ content_url('electronics/ultrasound.html') }}">Ultrasound Ranger</a>: an ultrasound based
+    range finder device. - AS Level project</li>
+
+    <li><a href="{{ content_url('electronics/altimeter.html') }}">Altitude Logger</a>: Low-velocity rocket payload to measure and transmit via radio
+    altitude readings.</li>
+
+    <li><a href="{{ content_url('electronics/spirit_level.html') }}">Digital Spirit Level</a>: Using an accelerometer to measure orientation of a
+    stationary device. - A2 Level project</li>
+</ul>
+
+<img src="{{ media_url('images/trex-nova.jpg') }}" height="375" /><img src="{{ media_url('images/ears-rocket.jpg') }}" width="250" height="375" />
+
+{% endblock main %}

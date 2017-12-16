@@ -1,0 +1,58 @@
+---
+title: Apex II Launch 1 Announcement
+subtitle: Columns template
+description: Test description
+category: Apex
+---
+
+{% extends "columns.j2" %}
+
+{% block main %}
+
+<h1>Announcement: Launch 1</h1>
+<h3>Project Apex II</h3>
+<hr />
+ 
+Hi everyone,
+ 
+Just a notification of the upcoming launch of Project Apex II on Saturday 17/07/10 from Churchill College, Cambridge. We will aim to launch at around 08:30 BST; the exact time will depend on weather and last minute payload testing.
+ 
+The team is based at Sutton Grammar School in Sutton, Surrey and this is the second payload to be launched by the team. Information on this payload can be found at the project's homepage, here: <a href="http://www.hexoc.com/pages/apex/apex-ii.php" target="_blank">hexoc.com/pages/apex/apex-ii.php</a>
+and in the project image gallery: <a href="http://balloon.hexoc.com/gallery/apex-ii/" target="_blank">balloon.hexoc.com/gallery/apex-ii</a>.
+ 
+We would of course of grateful for anyone able to help with the tracking of the payload during flight. The downlink details are as follows:
+<ul>
+<li>
+Listen on AM SSB
+</li><li>
+434.075 MHz
+</li><li>
+Shift: 425
+</li><li>
+Baud: 50 and 300 (alternating)
+</li><li>
+Format: 8 bits per char, no parity, 1 stop bit
+</li><li>
+Decoding: Select the APEX payload in dl-fldigi. This defaults to 50 baud; you must switch to 300 baud manually if you wish to decode the 300 baud transmissions instead of the 50 baud ones.
+</li></ul>
+
+Just select the "apex" payload in dl-fldigi (get the latest version at <a href="http://github.com/jamescoxon/dl-fldigi/downloads" target="_blank">github</a>). As above, we are experimenting with different baud rates and so the payload will alternate, transmitting each packet first on 300 then on 50 baud RTTY.
+ 
+We have an array of sensors on board including temperature, pressure, light,
+and ionising radiation. All this data is transmitted in the telemetry and
+decoded and displayed by the tracker at <a href="http://spacenear.us/tracker"
+    target="_blank">spacenear.us</a>.
+ 
+For those not available to track, you'll be able to watch the balloon's path at the tracker link above.
+ 
+For latest information and updates on the launch date, keep an eye on Twitter (<a href"http://twitter.com/apex_ii" target="_blank">@apexhab</a>) and for the &#35;apexhab hashtag. Also we will be on IRC &#35;highaltitude on irc.freenode.net.
+ 
+Get in contact with the team by using the team mailing list: <a href="mailto:project-apex@googlegroups.com">project-apex@googlegroups.com</a>.
+ 
+Writeups of the project, photographs and videos will be available at the project website after the launch.
+ 
+Best regards,
+<br />
+Jon Sowman (on behalf of Apex II Team)
+
+{% endblock main %}

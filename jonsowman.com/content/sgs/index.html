@@ -1,0 +1,30 @@
+---
+title: SGS Weather
+subtitle: Columns template
+description: Test description
+category: SGS Weather
+---
+
+{% extends "columns.j2" %}
+
+{% block main %}
+<h1>SGS Weather</h1>
+<hr />
+
+Two weather-related projects installed and built at Sutton Grammar School
+during my time there and for some time afterwards. Their installation has been
+interesting and potentially useful to the D&T, Physics and Geography
+Departments.
+<br />
+
+<a href="{{ content_url('sgs/weather.html') }}">Weather Station</a>: Built by Jon Sowman, Matt Brejza and Ben Oxley in around 6
+months and extended and upgraded during the subsequent two years.
+<br />
+
+<a href="{{ content_url('sgs/wxsat.html') }}">Weather Satellite Receiver</a>: Mostly pre-built kit apart from the antenna,
+installed at the school to automatically detect, pick up and decode APT data
+from NOAA satellites.
+<br />
+<br />
+<img src="{{ media_url('images/noaa-19.jpg') }}" width="300" />
+{% endblock main %}
